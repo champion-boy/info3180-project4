@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Wishlist</title>
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+</head>
+<body ng-app="wishlist" layout="column">
+	
+	<!-- <md-toolbar layout="row"> -->
+	<navbar></navbar>
+
+	<div flex layout="row">
+		<!-- Container #3 -->
+		<md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+			<sidebar></sidebar>
+		</md-sidenav>
+        <!-- <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+        	<md-list>
+				
+        	</md-list>
+        </md-sidenav>
+ -->
+        <!-- Container #4 -->
+        <md-content flex id="content" layout-padding>
+			<section ui-view></section>
+        </md-content>
+	</div>
+	
+	<!--
+	<div layout="column" flex id="content" role="main">
+		<md-content layout="vertical" flex id="content">
+			<div layout="row" layout-align="center center" layout-fill>
+				<md-whiteframe class="md-whiteframe-z1" layout="column" flex="30" layout-padding>
+					<md-content md-theme="docs-dark">
+						<md-input-container>
+							<label>Email</label>
+							<input ng-model="user.email">
+						</md-input-container>
+						<md-input-container>
+							<label>Password</label>
+							<input ng-model="user.password" type="password">
+						</md-input-container>
+						<md-input-container layout-align="center center">
+							<div layout="row" layout-sm="column" layout-margin>
+								<md-button class="md-raised" flex="50" flex-sm="100">Login</md-button>
+								<md-button class="md-raised md-primary" flex="50" flex-sm="100">Register</md-button>
+							</div>
+						</md-input-container>
+					</md-content>
+				</md-whiteframe>
+			</div>
+		</md-content>
+	</div> 
+	-->
+
+	<!-- dependencies -->
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-aria/angular-aria.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-material/angular-material.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-resource/angular-resource.js"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="/js/app.js"></script>
+
+	<!-- services -->
+	<script type="text/javascript" src="/js/services/Session.js"></script>
+	<script type="text/javascript" src="/js/services/UserService.js"></script>
+	<script type="text/javascript" src="/js/services/WishlistService.js"></script>
+	<script type="text/javascript" src="/js/services/ItemService.js"></script>
+
+	<!-- directive -->
+	<script type="text/javascript" src="/js/directives/navbar.js"></script>
+	<script type="text/javascript" src="/js/directives/sidebar.js"></script>
+
+	<!-- controllers -->
+	<script type="text/javascript" src="/js/controllers/HomeCtrl.js"></script>
+	
+	<script type="text/javascript" src="/js/controllers/LoginCtrl.js"></script>
+	<script type="text/javascript" src="/js/controllers/RegisterCtrl.js"></script>
+	
+	<script type="text/javascript" src="/js/controllers/UserAllCtrl.js"></script>
+	<script type="text/javascript" src="/js/controllers/UserShowCtrl.js"></script>
+
+	<script type="text/javascript" src="/js/controllers/WishlistAllCtrl.js"></script>
+	<script type="text/javascript" src="/js/controllers/WishlistShowCtrl.js"></script>
+	<script type="text/javascript" src="/js/controllers/WishlistNewCtrl.js"></script>
+
+	<script type="text/javascript" src="/js/controllers/ItemAllCtrl.js"></script>
+	<script type="text/javascript" src="/js/controllers/ItemShowCtrl.js"></script>
+	<script type="text/javascript" src="/js/controllers/ItemNewCtrl.js"></script>
+
+</body>
+</html>
